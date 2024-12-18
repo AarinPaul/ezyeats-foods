@@ -1,0 +1,138 @@
+.header {
+     height: 34vw;
+     margin: 30px auto;
+     padding-bottom: 5px;
+     border-start-start-radius: 20px;
+     border-start-end-radius: 20px;
+     border-end-start-radius: 21px;
+     border-end-end-radius: 21px;
+     background-size: contain;
+     position: relative;
+     animation: slideImages 15s infinite;
+}
+
+@keyframes slideImages {
+
+     0%,
+     25% {
+          background: url('/header_img.png') no-repeat center;
+          background-size: contain;
+     }
+
+     26%,
+     50% {
+          background: url('/header_img2.png') no-repeat center;
+          background-size: contain;
+     }
+
+     51%,
+     75% {
+          background: url('/header_img3.png') no-repeat center;
+          background-size: contain;
+     }
+
+     76%,
+     100% {
+          background: url('/header_img4.png') no-repeat center;
+          background-size: contain;
+     }
+}
+
+.ticker-container {
+     width: 100%;
+     overflow: hidden;
+     background-color: #000;
+     padding: 10px 0;
+     margin-bottom: 30px;
+     border-radius: 20px;
+}
+
+.ticker-text {
+     display: inline-block;
+     white-space: nowrap;
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #fff;
+     animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+     0% {
+          transform: translateX(0);
+     }
+
+     100% {
+          transform: translateX(-50%);
+     }
+}
+
+.header-contents {
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+     gap: 1.5vw;
+     max-width: 50%;
+     bottom: 10%;
+     left: 6vw;
+     animation: fadeIn 2.5s;
+}
+
+.header-contents h2 {
+     font-weight: 600;
+     color: black;
+     font-size: max(4.5vw, 22px);
+     padding-bottom: 25px;
+}
+
+.header-contents p {
+     font-weight: 450;
+     font-style: italic;
+     font-size: 1vw;
+}
+
+.header-contents button {
+     border: none;
+     color: #747474;
+     font-weight: 600;
+     padding: 1vw 2.3vw;
+     background-color: white;
+     font-size: max(1vw, 13px);
+     border-radius: 50px;
+     transition: all ease-out 0.40s;
+}
+
+.header-contents button:hover {
+     transform: scale(1.13);
+     color: red;
+}
+
+@media (max-width: 1050px) {
+     .header-contents {
+          max-width: 45%;
+     }
+}
+
+@media (max-width: 750px) {
+     .header-contents {
+          max-width: 65%;
+     }
+
+     .header-contents h2 {
+          width: 70%;
+     }
+
+     .header-contents p {
+          display: none;
+     }
+
+     .header-contents button {
+          padding: 2vw 4vw;
+     }
+}
+
+@media (max-width:300) {
+     .header-contents h2 {
+          padding-top: 50px;
+     }
+}

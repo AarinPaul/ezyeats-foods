@@ -1,0 +1,21 @@
+.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 8px 4%;
+}
+
+.navbar .logo{
+     width: 150px;
+}
+
+.navbar p{
+     font-weight: 600;
+     font-size: 25px;
+     color: tomato;
+     align-items: center;
+}
+
+.navbar .profile{
+     width: 40px;
+}
