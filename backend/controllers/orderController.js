@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Function to place an order and create Stripe session
 const placeOrder = async (req, res) => {
-     const frontend_url = "https://ezyeats-foods-admin.onrender.com";
+     const frontend_url = "http://localhost:5174" || "http://localhost:5173" ;
 
      try {
           // Step 1: Calculate total order value dynamically
